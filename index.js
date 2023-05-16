@@ -12,6 +12,8 @@ const fs = require('fs-extra')
 const cron = require('node-cron')
 const exec = require('await-exec')
 
+require("http").createServer((_, res) => res.end("Suzume!")).listen(8080)
+
 const start = (bocchi = new Client()) => {
     console.log(color(figlet.textSync('BocchiBot', 'Larry 3D'), 'cyan'))
     console.log(color('=> Bot successfully loaded! Database:', 'yellow'), color(loader.getAllDirFiles('./database').length), color('Library:', 'yellow'), color(loader.getAllDirFiles('./lib').length), color('Function:', 'yellow'), color(loader.getAllDirFiles('./function').length))
