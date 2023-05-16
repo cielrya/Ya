@@ -1413,7 +1413,7 @@ module.exports = msgHandler = async (bocchi = new Client(), message) => {
                 }
                 break
             case 'sticker':
-            case 'stiker':
+            case 's':
                 if (!isRegistered) return await bocchi.reply(from, eng.notRegistered(), id)
                 if (isMedia && isImage || isQuotedImage) {
                     await bocchi.reply(from, eng.wait(), id)
